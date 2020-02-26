@@ -1,22 +1,22 @@
 #!/bin/bash
 
-
+    clear
     echo "WARNING: THIS UPDATE WILL OVERWRITE THE THEME. IF YOU WOULD LIKE TO ABORT, DO CTRL+C"
-    sleep 3
+    sleep 5
 
 
     clear
-    echo "Checking if you installed the theme"
+    echo "Checking if you installed the theme..."
     cd /root
     FILE=/root/discordactyl_v1.1.zip
     [ -f "$FILE" ] && {
 
-    echo "The update is installed, continuing..."
+    echo "The update file is installed, continuing..."
     sleep 2
 
     # SCRIPT START
 
-    echo "Starting theme update.... Please do not leave."
+    echo "Starting  theme update.... Please do not leave."
     sleep 1
 
     echo "Installing zip"
@@ -26,10 +26,6 @@
     echo "Backing up Pterodactyl directory just in case."
     zip -r Ptero-Backup-$(date +"%Y-%m-%d").zip /var/www/pterodactyl
 
-
-    echo "Updating theme..."
-    cd /root
-    cd /var/www/pterodactyl/
 
 
     echo "Unzipping theme"
@@ -46,8 +42,7 @@
     echo "Making neccesarry directories"
     cd /var/www/pterodactyl/public/themes
     mkdir -p discordactyl
-
-
+    
     cd /var/www/pterodactyl/resources/themes
     mkdir -p discordactyl
 
