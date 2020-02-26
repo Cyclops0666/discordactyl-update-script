@@ -27,7 +27,6 @@
     zip -r Ptero-Backup-$(date +"%Y-%m-%d").zip /var/www/pterodactyl
 
 
-
     echo "Updating theme..."
     cd /root
     cd /var/www/pterodactyl/
@@ -43,9 +42,11 @@
     cd /root/tempunzip
     cp -r /root/tempunzip/discordactyl_v1.1/config/themes.php /var/www/pterodactyl/config/ # Copies over the themes.php file
 
+
     echo "Making neccesarry directories"
     cd /var/www/pterodactyl/public/themes
     mkdir -p discordactyl
+
 
     cd /var/www/pterodactyl/resources/themes
     mkdir -p discordactyl
@@ -57,8 +58,6 @@
 
     echo "Copying the resources theme"
     cp -r /root/tempunzip/discordactyl_v1.1/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
-
-
 
 
     echo "Files have been copied over!"
