@@ -4,7 +4,8 @@
     echo "Checking if you installed the theme"
     cd /root
     FILE=/root/discordactyl_v1.1.zip
-    if [ -f "$FILE" ]; then
+    [ -f "$FILE" ] && {
+
     echo "The update is installed, continuing..."
     sleep 2
 
@@ -78,13 +79,11 @@
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
     sleep 3
+    }
+    
+    || echo "You have not installed the update file. Please install it and run the command again"
+
 
     #SCRIPT END
-
-
-
-    else 
-    echo "You have not installed the update file. Please install it and run the command again"
-    fi
     
 fi
