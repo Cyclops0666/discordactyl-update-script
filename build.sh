@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+    echo "Checking if you installed the theme"
+    cd /root
+    FILE=/root/discordactyl_v1.1.zip
+    if [ -f "$FILE" ]; then
+    echo "The update is installed, continuing..."
+    sleep 2
+
+    # SCRIPT START
+
     echo "Starting theme update.... Please do not leave."
     sleep 1
 
@@ -11,15 +21,8 @@
     zip -r Ptero-Backup-$(date +"%Y-%m-%d").zip /var/www/pterodactyl
 
 
-    echo "Checking if you installed the theme"
-    cd /root
-    FILE=/root/discordactyl_v1.1.zip
-    if [ -f "$FILE" ]; then
-    echo "The update is installed, continuing..."
-    sleep 2
 
-    # SCRIPT START
-        echo "Updating theme..."
+    echo "Updating theme..."
     cd /root
     cd /var/www/pterodactyl/
 
