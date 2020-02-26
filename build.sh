@@ -1,6 +1,11 @@
 #!/bin/bash
 
 
+    echo "WARNING: THIS UPDATE WILL OVERWRITE THE THEME. IF YOU WOULD LIKE TO ABORT, DO CTRL+C"
+    sleep 3
+
+
+    clear
     echo "Checking if you installed the theme"
     cd /root
     FILE=/root/discordactyl_v1.1.zip
@@ -83,5 +88,3 @@
 
     
     #SCRIPT END
-    
-fi
