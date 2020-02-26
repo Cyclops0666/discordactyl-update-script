@@ -79,11 +79,9 @@
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
     sleep 3
-    }
+    } || echo "You have not installed the update file. Please install it and run the command again"
+
     
-    || echo "You have not installed the update file. Please install it and run the command again"
-
-
     #SCRIPT END
     
 fi
