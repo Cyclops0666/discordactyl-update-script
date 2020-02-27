@@ -36,23 +36,25 @@
     echo "Copying the themes.php file"
     cd /root/tempunzip
     cp -r /root/tempunzip/discordactyl_v1.1.1/config/themes.php /var/www/pterodactyl/config/ # Copies over the themes.php file
-
+    sleep 1
 
     echo "Making neccesarry directories"
     cd /var/www/pterodactyl/public/themes
     mkdir -p discordactyl
+    sleep 1
     
     cd /var/www/pterodactyl/resources/themes
     mkdir -p discordactyl
+    sleep 1
 
     
     echo "Copying the public theme"
     cp -r /root/tempunzip/discordactyl_v1.1/public/themes/discordactyl/* /var/www/pterodactyl/public/themes/discordactyl
-
+    sleep 1
 
     echo "Copying the resources theme"
     cp -r /root/tempunzip/discordactyl_v1.1/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
-
+    sleep 1
 
     echo "Files have been copied over!"
     sleep 2
@@ -72,7 +74,7 @@
 
     sleep 3
 
- 
+    clear
     echo "Discordactyl has been succesfully updated!"
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
