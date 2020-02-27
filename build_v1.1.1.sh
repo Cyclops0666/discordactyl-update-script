@@ -72,7 +72,7 @@
 
     sleep 3
 
-    clear
+ 
     echo "Discordactyl has been succesfully updated!"
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
