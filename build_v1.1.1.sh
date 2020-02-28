@@ -75,15 +75,18 @@
 
     sleep 3
 
+    [ -f /var/www/pterodactyl/public/themes/discordactyl/css/custom.css ] && echo "custom.css file exists... skipping creating one" || cd /var/www/pterodactyl/public/themes/discordactyl/css/ && touch custom.css
+    sleep 2
+
     clear
 
-    [ -f /var/www/pterodactyl/public/themes/discordactyl/css/custom.css ] && echo "custom.css file exists... skipping creating one" || cd /var/www/pterodactyl/public/themes/discordactyl/css/ && touch custom.css
 
     echo "Discordactyl has been succesfully updated!"
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
+    echo "Your backup file is located in the /root directory."
     sleep 3
     } || echo "You have not installed the update file. Please install it and run the command again"
 
     
-    #SCRIPT END
+    #SCRIPT END 
