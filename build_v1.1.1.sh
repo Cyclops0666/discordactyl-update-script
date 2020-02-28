@@ -49,11 +49,11 @@
 
     
     echo "Copying the public theme"
-    cp -r /root/tempunzip/discordactyl_v1.1/public/themes/discordactyl /var/www/pterodactyl/public/themes/discordactyl
+    cp -r /root/tempunzip/discordactyl_v1.1.1/public/themes/discordactyl/* /var/www/pterodactyl/public/themes/discordactyl
     sleep 1
 
     echo "Copying the resources theme"
-    cp -r /root/tempunzip/discordactyl_v1.1/resources/themes/discordactyl /var/www/pterodactyl/resources/themes/discordactyl
+    cp -r /root/tempunzip/discordactyl_v1.1.1/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
     sleep 1
 
     echo "Files have been copied over!"
@@ -75,6 +75,9 @@
     sleep 3
 
     clear
+
+    [ -f /var/www/pterodactyl/public/themes/discordactyl/css/custom.css ] && echo "custom.css file exists... skipping creating one" || cd /var/www/pterodactyl/public/themes/discordactyl/css/ && touch custom.css
+
     echo "Discordactyl has been succesfully updated!"
     echo "IMPORTANT"
     echo "Edit your .env file in /var/www/pterodactyl/ and change the APP_THEME value to discordactyl"
