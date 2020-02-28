@@ -24,8 +24,7 @@
 
 
     echo "Backing up Pterodactyl directory just in case."
-    zip -r Ptero-Backup-$(date +"%Y-%m-%d").zip
-
+    zip -r ptero-backup-$(date +"%Y-%m-%d").zip /var/www/pterodactyl
 
     echo "Unzipping theme"
     cd /root
