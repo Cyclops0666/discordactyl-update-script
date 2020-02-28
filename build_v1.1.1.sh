@@ -20,11 +20,13 @@
     sleep 1
 
     echo "Installing zip"
-    apt install zip unzip
+    apt install zip unzip --yes
+    sleep 1
 
 
     echo "Backing up Pterodactyl directory just in case."
     zip -r ptero-backup-$(date +"%Y-%m-%d").zip /var/www/pterodactyl
+    sleep 1
 
     echo "Unzipping theme"
     cd /root
