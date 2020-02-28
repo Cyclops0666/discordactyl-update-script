@@ -49,11 +49,11 @@
 
     
     echo "Copying the public theme"
-    mv /root/tempunzip/discordactyl_v1.1/public/themes/discordactyl/* /var/www/pterodactyl/public/themes/discordactyl
+    cp -r /root/tempunzip/discordactyl_v1.1/public/themes/discordactyl /var/www/pterodactyl/public/themes/discordactyl
     sleep 1
 
     echo "Copying the resources theme"
-    mv /root/tempunzip/discordactyl_v1.1/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
+    cp -r /root/tempunzip/discordactyl_v1.1/resources/themes/discordactyl /var/www/pterodactyl/resources/themes/discordactyl
     sleep 1
 
     echo "Files have been copied over!"
