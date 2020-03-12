@@ -2,12 +2,12 @@
 
     THEMEDIR=discordactyl_v1.1.1
 
-    clear
+    
     echo "WARNING: THIS UPDATE WILL OVERWRITE THE THEME. IF YOU WOULD LIKE TO ABORT, DO CTRL+C"
     sleep 5
 
 
-    clear
+    
     echo "Checking if you installed the theme..."
     cd /root
     FILE=/root/THEMEDIR.zip
@@ -80,7 +80,7 @@
     [ -f /var/www/pterodactyl/public/themes/discordactyl/css/custom.css ] && echo "custom.css file exists... skipping creating one" || cd /var/www/pterodactyl/public/themes/discordactyl/css/ && touch custom.css
     sleep 2
 
-    clear
+    
 
 
     echo "Discordactyl has been succesfully updated!"
