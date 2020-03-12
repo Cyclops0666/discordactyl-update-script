@@ -1,6 +1,6 @@
 #!/bin/bash
 
-    THEMEDIR=discordactyl_v1.1.1
+    THEMEDIR='discordactyl_v1.1.2'
 
     
     echo "WARNING: THIS UPDATE WILL OVERWRITE THE THEME. IF YOU WOULD LIKE TO ABORT, DO CTRL+C"
