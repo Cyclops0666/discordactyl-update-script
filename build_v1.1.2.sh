@@ -10,7 +10,7 @@
     
     echo "Checking if you installed the theme..."
     cd /root
-    FILE=/root/$THEMEDIR.zip
+    FILE=/root/discordactyl_v1.1.2.zip
     [ -f "$FILE" ] && {
 
     echo "The update file is installed, continuing..."
@@ -32,13 +32,13 @@
 
     echo "Unzipping theme"
     cd /root
-    unzip THEMEDIR.zip -d /root/tempunzip
+    unzip $THEMEDIR.zip -d /root/tempunzip
     sleep 1
 
     
     echo "Copying the themes.php file"
     cd /root/tempunzip
-    cp -r /root/tempunzip/THEMEDIR/config/themes.php /var/www/pterodactyl/config/ # Copies over the themes.php file
+    cp -r /root/tempunzip/$THEMEDIR/config/themes.php /var/www/pterodactyl/config/ # Copies over the themes.php file
     sleep 1
 
     echo "Making neccesarry directories"
@@ -52,11 +52,11 @@
 
     
     echo "Copying the public theme"
-    cp -r /root/tempunzip/THEMEDIR/public/themes/discordactyl/* /var/www/pterodactyl/public/themes/discordactyl
+    cp -r /root/tempunzip/$THEMEDIR/public/themes/discordactyl/* /var/www/pterodactyl/public/themes/discordactyl
     sleep 1
 
     echo "Copying the resources theme"
-    cp -r /root/tempunzip/THEMEDIR/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
+    cp -r /root/tempunzip/$THEMEDIR/resources/themes/discordactyl/* /var/www/pterodactyl/resources/themes/discordactyl
     sleep 1
 
     echo "Files have been copied over!"
@@ -67,7 +67,7 @@
     sleep 2
 
     rm -rf /root/tempunzip
-    rm -rf /root/THEMEDIR.zip
+    rm -rf /root/$THEMEDIR.zip
 
 
     echo "Clearing pterodactyl views and cache"
