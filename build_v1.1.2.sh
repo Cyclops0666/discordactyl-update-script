@@ -10,7 +10,7 @@
     
     echo "Checking if you installed the theme..."
     cd /root
-    FILE=/root/THEMEDIR.zip
+    FILE=/root/$THEMEDIR.zip
     [ -f "$FILE" ] && {
 
     echo "The update file is installed, continuing..."
